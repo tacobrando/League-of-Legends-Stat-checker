@@ -1,1 +1,0 @@
-export { default } from "file:///Users/cheeseboiger/Documents/Work/Projects/lol-stats-reader/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"

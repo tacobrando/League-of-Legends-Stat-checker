@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   css: ['/assets/css/app.css'],
+  ssr: false,
   // routeRules: {
   //   '/summoner/[region]/[name]': { ssr: false }
   // },

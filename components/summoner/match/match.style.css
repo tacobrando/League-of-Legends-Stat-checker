@@ -1,0 +1,207 @@
+.match {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 15px;
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+  --red100: #59343B;
+  --red200: #703C47;
+  --red500: #E84057;
+  --blue100: #28344E;
+  --blue200: #2F436E;
+  --blue500: #5383E8;
+}
+
+.icon{
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.victory {
+  background: var(--blue100);
+  border-left: 6px solid var(--blue500);
+}
+
+.defeat {
+  background: var(--red100);
+  border-left: 6px solid var(--red500);
+}
+.summoner-stats {
+  display: block;
+}
+.summoner-champion{
+  display: flex;
+  align-items: center;
+}
+
+.summoner-champion div{
+  display: block;
+}
+.summoner-champion span {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  background: rgb(32, 45, 55);
+  border-radius: 50%;
+  
+}
+
+.summoner-champion img {
+  border: 0;
+  display: block;
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+
+.spells {
+  margin-left: 4px;
+}
+
+.spells img {
+  display: block;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+}
+
+.spell {
+  height: 22px;
+  width: 22px;
+}
+
+.spell:nth-of-type(1){
+  margin-bottom: 2px;
+}
+
+.rune:nth-of-type(1) {
+  margin-bottom: 2px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.runes div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rune {
+  width: 22px;
+  height: 22px;
+}
+
+.score {
+  width: 90px;
+}
+
+.kda {
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.kda span {
+  font-weight: bold;
+}
+
+#deaths {
+  color: red;
+}
+
+.ratio {
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.ratio span {
+  line-height: 16px;
+}
+
+/* .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 140px;
+  font-size: 11px;
+} */
+
+.items {
+  display: flex;
+}
+
+.items ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  height: 22px;
+}
+
+.items li {
+  margin: 1px;
+}
+
+.items img {
+  border-radius: 4px;
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+
+.participants {
+  display: flex;
+}
+
+.participants ul {
+  list-style: none;
+}
+
+.participants ul:nth-of-type(1) {
+  margin-right: 8px;
+}
+
+.participants li {
+  display: flex;
+  align-items: center;
+  width: 88px;
+  height: 18px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.championIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  border-radius: 4px;
+}
+/* .championName {
+  display: inline-block;
+  max-width: 70px;
+  vertical-align: middle;
+} */
+
+.championName a {
+  font-size: 12px;
+  color: inherit;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -17,7 +17,7 @@
           :items="items"
           :duration="match.info.gameDuration" 
         />
-        <span class="flex">
+        <span class="hidden md:flex">
           <SummonerMatchTeam :team="teams[0]" />
           <SummonerMatchTeam :team="teams[1]" />
         </span>

@@ -9,5 +9,6 @@ A web app to allow users to search for League of Legends player match history.
 
 # Match History
 ![til](./assets/preview/preview2.png)
+
 ![til](./assets/preview/preview3.png)
 

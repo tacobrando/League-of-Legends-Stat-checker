@@ -1,5 +1,5 @@
 <template>
-  <div class="summoner-profile m-4" v-if="summonerInfo && matchHistory">
+  <div class="summoner-profile m-4" v-if="isLoaded">
     <div class="flex justify-start items-end">
       <span class="relative inline-block">
         <SummonerAvatar class="block w-full rounded-lg" />
@@ -7,10 +7,10 @@
       </span>
       <span class="ml-4 flex flex-col">
         <SummonerName class="text-2xl font-bold" />
-        <ElButton type="primary">Update</ElButton>
+        <ElButton type="primary" @click="getSummonerData">Update</ElButton>
       </span>
     </div>
-    <div class=" mt-8 sm:m-8 flex flex-col justify-center items-center">
+    <div class=" mt-8 sm:m-8 flex flex-col justify-center items-start md:items-center">
       <SummonerMatchHistory :history="matchHistory" />
     </div>
   </div>
@@ -28,8 +28,12 @@ const route = useRoute();
 const summonerInfo = ref(null)
 const matchHistory = ref(null);
 
+const isLoaded = computed(() => (summonerInfo.value && matchHistory.value))
+
 
 async function getSummonerData () {
+  summonerInfo.value = null
+  matchHistory.value = null
   if(!summonerInfo.value) {
     const { region, name } = route.params;
     const summonerData = await store.getSummonerInfo(region, name);

@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ errorMessages[error.statusCode] }} {{ error.statusMessage }}
+    {{ error.statusCode }} {{ error.statusMessage }}
   </div>
 </template>
 
@@ -8,9 +8,9 @@
 import { useErrorStore } from '~/store/error';
 const errorStore = useErrorStore()
 const error = computed(() => errorStore.error)
-const errorMessages = {
-  400: 'Summoner info',
-  404: 'Summoner',
-}
+// const errorMessages = {
+//   400: 'Summoner info',
+//   404: 'Summoner',
+// }
 
 </script>

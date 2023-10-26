@@ -5,9 +5,5 @@
   </div>
 </template>
 <script setup>
-import { useStore } from '~/store/store';
 const { history } = defineProps(['history'])
-
-const store = useStore()
-const route = useRoute()
 </script>

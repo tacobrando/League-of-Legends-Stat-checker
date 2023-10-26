@@ -1,5 +1,5 @@
 <template>
-  <div class="queue-type pr-4">
+  <div class="queue-type pr-4 text-xs">
     <div id="game-type" class="text-bold">
         {{ gameType }}
     </div>

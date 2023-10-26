@@ -6,9 +6,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   if (isNavigatingToErrorRoute) {
     if (!errorStore.error.statusMessage) {
-      // If you're navigating to the error page and there's no error set in the store
       errorStore.resetErrors();
-      return navigateTo('/'); // Redirect to the homepage
+      return navigateTo('/');
     }
   } else {
     errorStore.resetErrors()

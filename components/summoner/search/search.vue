@@ -49,14 +49,6 @@ const searchFormRules = reactive({
   },  
 })
 
-// async function handleSearch() {
-//   const isRegionSet = regions.find((region) => region.value === searchForm.region);
-//   const isInputValid = searchForm.name !== '';
-//   if(isRegionSet && isInputValid) {
-//     await store.getSummonerInfo(searchForm.region, searchForm.name);
-//   }
-// }
-
 async function handleSearch(form) {
   if(!form) return
   form.validate((valid) => {
@@ -72,9 +64,6 @@ async function handleSearch(form) {
 function handleSelect(region) {
   store.setRegion(region)
 }
-
-// const searchInputRef = ref('')
-// const regionSelectRef = ref(store.region)
 
 watch(() => store.region, (newVal) => {
   searchForm.region = newVal

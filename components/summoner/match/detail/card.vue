@@ -1,6 +1,6 @@
 <template>
   <div v-if="isOpen">
-    <div class="w-full bg-gray-300 mb-1 text-center">
+    <div class="w-full bg-gray-300 mb-1 text-center rounded-md">
       Overview
     </div>
     <SummonerMatchDetailTeam :team="teams[0]" :spells="spells" :runes="runes" :win="win" />

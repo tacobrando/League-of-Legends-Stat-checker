@@ -21,7 +21,6 @@
 <script setup>
 const route = useRoute()
 const activeIndex = computed(() => route.path)
-// const activeBgColor = computed(() => activeIndex.value === route.path ? 'bg-amber-700' )
 </script>
 <style scoped>
 #navbar-search-input {

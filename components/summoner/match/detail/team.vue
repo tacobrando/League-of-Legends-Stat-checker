@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full" :class="[win ? 'bg-blue-400' : 'bg-red-400', team[0].teamId === 100 ? 'rounded-t-lg' : 'rounded-b-lg']">
+  <div class="w-full" :class="[win ? 'bg-blue-400' : 'bg-red-400', team[0].teamId === 100 ? 'rounded-t-md' : 'rounded-b-md']">
     <!-- Header -->
-    <div class="w-full bg-gray-300 mb-1 flex justify-between items-center px-1" :class="[team[0].teamId === 100 ? 'rounded-t-lg' : '']">
+    <div class="w-full bg-gray-300 mb-1 flex justify-between items-center px-1" :class="[team[0].teamId === 100 ? 'rounded-t-md' : '']">
       <span class="w-1/3 text-center">{{ win ? 'Victory' : 'Defeat'}} ({{ team[0].teamId === 100 ? 'Blue Team' : 'Red Team' }})</span>
       <span class="w-1/6 text-center">KDA</span>
       <span class="w-1/4 text-center">Damage</span>

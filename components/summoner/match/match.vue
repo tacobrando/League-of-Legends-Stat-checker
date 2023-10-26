@@ -1,6 +1,6 @@
 <template>
   <div class="match">
-    <div :class="['flex rounded-lg w-[92vw] lg:w-[45vw]', gameStatus ? 'victory' : 'defeat', detailsCard ? 'mb-1' : 'mb-2']">
+    <div :class="['flex rounded-md w-[92vw] xl:w-[45vw]', gameStatus ? 'victory' : 'defeat', detailsCard ? 'mb-1' : 'mb-2']">
       <div class="flex m-2 w-full justify-between">
         <SummonerMatchQueue 
           :duration="match.info.gameDuration" 

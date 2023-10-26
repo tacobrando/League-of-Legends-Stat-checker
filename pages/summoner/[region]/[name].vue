@@ -10,7 +10,7 @@
         <ElButton type="primary" @click="getSummonerData">Update</ElButton>
       </span>
     </div>
-    <div class=" mt-8 sm:m-8 flex flex-col justify-center items-start md:items-center">
+    <div class=" mt-8 flex flex-col justify-center items-start md:items-center">
       <SummonerMatchHistory :history="matchHistory" />
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full" :class="[win ? 'bg-blue-400' : 'bg-red-400']">
+  <div class="w-full" :class="[win ? 'bg-blue-400' : 'bg-red-400', team[0].teamId === 100 ? 'rounded-t-lg' : 'rounded-b-lg']">
     <!-- Header -->
-    <div class="w-full bg-gray-300 mb-1 flex justify-between items-center px-1">
+    <div class="w-full bg-gray-300 mb-1 flex justify-between items-center px-1" :class="[team[0].teamId === 100 ? 'rounded-t-lg' : '']">
       <span class="w-1/3 text-center">{{ win ? 'Victory' : 'Defeat'}} ({{ team[0].teamId === 100 ? 'Blue Team' : 'Red Team' }})</span>
       <span class="w-1/6 text-center">KDA</span>
       <span class="w-1/4 text-center">Damage</span>
@@ -31,7 +31,7 @@
         <p>{{kdaParse(player.kills, player.assists, player.deaths)}}</p>
       </span>
       <!-- Damage -->
-      <span class="w-1/4 flex justify-center items-center space-x-2">
+      <span class="w-1/4 flex justify-center items-center space-x-1">
         <span class="flex flex-col items-center ml-2">
           <div>{{ player.totalDamageDealtToChampions }}</div>
           <div class="progress-container bg-gray-700">
@@ -74,7 +74,6 @@ const { name, region } = useRoute().params
 const config = useRuntimeConfig()
 const itemBase = config.public.itemBase
 
-// const totalTeamDamage = computed(() => getTotalTeamDamageChampion(team))
 const highestPlayerDamage = computed(() => getHighestDamage(team, 'totalDamageDealtToChampions'))
 const highestDamageTaken = computed(() => getHighestDamage(team, 'totalDamageTaken'))
 const allPlayerItems = computed(() => {
@@ -85,8 +84,6 @@ const allPlayerItems = computed(() => {
     return itemsObj;
 });
 
-
-// Computed property or method to get percentage of player's damage
 const damagePercentage = (player, option) => {
     let highestValue;
     let playerValue;
@@ -112,7 +109,7 @@ const damagePercentage = (player, option) => {
 <style scoped>
 .progress-container {
   width: 40px;
-  height: 4px; /* or whatever height you want */
+  height: 4px;
   border-radius: 2px;
 }
 
